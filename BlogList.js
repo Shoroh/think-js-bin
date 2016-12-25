@@ -5,8 +5,16 @@ const BlogList = ({ posts }) => (
       posts,
       (post, key) => (
         DOM.li({ key },
-               React.createElement(BlogItem, { post }))
+          React.createElement(BlogItem, { post }))
       )
     )
   )
-);
+)
+
+BlogList.defaultProps = {
+  posts: []
+}
+
+BlogList.propTypes = {
+  posts: PropTypes.array
+}

@@ -4,3 +4,7 @@ class BlogPage extends React.Component {
     return React.createElement(BlogList, { posts });
   }
 }
+
+BlogPage.propTypes = {
+  posts: PropTypes.array
+}
